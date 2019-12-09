@@ -1,0 +1,70 @@
+.main {
+    background: #fff;
+    #cont{
+        
+        
+        #list{
+            margin-top: 10px;
+            margin-left: 10px; 
+            li{
+                float: left;
+                width: 260px;
+                height: 300px;
+                padding: 12px;
+                margin-left: 11px;
+                margin-top: 11px;
+                border: 1px solid #eee;
+                position: relative;
+                &:hover {
+                    box-shadow: 0 0 6px #eee;
+                }
+            }
+        }
+    }
+    #pagination{
+        width: 560px;
+        margin: 10px auto;
+        a { 
+            display: inline-block;
+            margin-right: 10px; 
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            &.prev {
+                width: 100px;
+            }
+            &.next {
+                width: 100px;
+            }
+        }
+        span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px; 
+            margin-right: 10px;
+            text-align: center;
+            &.current {
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                line-height: 30px; 
+                margin-right: 10px;
+                text-align: center;
+                background-color: skyblue;
+                color:#fff;
+            }
+            &.prev {
+                &.current {
+                  width: 100px;
+                }
+            }
+            &.next {
+                &.current {
+                  width: 100px;
+                }
+            }
+        }
+    }
+} 
