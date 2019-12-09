@@ -8,15 +8,12 @@
         //对应索引值的div添加selected类，其他的删除selected类
         //【重要】根据tab的索引值获取下方图片div的索引值
         $(".tab-bd>.item").eq($(this).index()).addClass("selected").siblings(".item").removeClass("selected");
-
+        // console.log($(".selected"))
 
         
         
-
-
     });
 
-    
     $.ajax({	
         //请求方式
         type:'get',
@@ -35,35 +32,37 @@
             // console.log(data.each(0))
             
             //拼接字符串
-            
+            var str = '';
             //对数据做遍历，拼接到页面显示
-            for(var i=0;i<group.length;i++){
-                var str = '';
-                for(var j=0;j<group[i].length;j++){
+            for(var i=0;i<group.length-5;i++){
+                
                     str += '<li>'+ 
                                 '<div class="inner">'+
                                     '<div class="img-wrap">'+
                                         '<a href="#">'+
-                                            '<img src="'+ group[i][j].img +'">'
+                                            '<img src="'+ group[i].img +'">'
                                         +'</a>'
                                     +'</div>'
-                                    +'<a>'+ group[i][j].title +'</a>'
+                                    +'<a href="#" class=".pro-name">'+ group[i].title +'</a>'
                                     +'<div class="pro-price">'+
-                                        '<span class="price-now">'+ group[i][j].price +'</span>'
-                                        +'<em>'+ group[i][j].discount +'</em>'
+                                        '<span class="price-now">'+ group[i].price +'</span>'
+                                        +'<em class="price-old">'+ group[i].discount +'</em>'
                                     +'</div>'
                                 +'</div>'    
                             +'</li>';
+                            $('.selected').find(".pro-list-p").html(str);
                 }
                 //放入页面的容器显示
-                $('.tab-bd>.selected').find(".pro-list-p").html(str);
-            }           
+                $('.selected').find(".pro-list-p").html(str);
+                       
         },
         //请求失败的处理
         error:function(jqXHR){
             console.log(jqXHR);
         }
     });
+    
+    
 
 })(jQuery);
 

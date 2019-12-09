@@ -17,4 +17,5 @@
     $(".public_f").load("http://localhost/project/server/html/public.html .public_footer")
     
     
+
 })(jQuery);

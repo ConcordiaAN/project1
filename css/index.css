@@ -469,6 +469,26 @@ header {
           width: 214px;
           height: 300px;
           padding: 3px 13px; }
+          .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            transition: .4s; }
+            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .img-wrap img {
+              height: 194px;
+              width: 194px; }
+            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner a {
+              color: #666; }
+            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-name {
+              margin: 10px 0; }
+            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-price .price-now {
+              font-size: 16px;
+              color: #ff2b2b;
+              margin-right: 10px; }
+            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-price .price-old {
+              font-size: 14px;
+              color: #aaa;
+              text-decoration: line-through; }
   .main .main-mzgh {
     padding-top: 30px; }
     .main .main-mzgh .main-mzgh-box {
