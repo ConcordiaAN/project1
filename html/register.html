@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="get">
+    <input type="text" placeholder="用户名"><br /><input type="password" placeholder="密码"><br />
+    <input type="button" value="注册">
+    <p>已有账号？直接<a href="login.html">登录</a></p>
+</form>
+
+<script src="cookie.js"></script>
+<script>
+    var oBtn = document.getElementsByTagName('input');
+    oBtn[2].onclick = function(){
+        if(getCookie(oBtn[0].value)){
+            alert('用户名已存在');
+            oBtn[0].value = oBtn[1].value = '';
+        }else{
+            createCookie(oBtn[0].value,oBtn[1].value,30);
+            alert('注册成功!跳转至登录页面?');
+            location.href = "login.html";
+        }
+    };
+</script>
+</body>
+</html>

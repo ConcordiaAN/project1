@@ -4,9 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>登入注册</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/logon.css">
+
 </head>
 <body>
-    登入注册
+    
+    <!-- top -->
+    <div id="top">
+        <div class="margin clear">
+            <!-- 左 -->
+            <div class="user fl">
+                <a href="#" class="colorHong"><i class="sc"></i>收藏跨境通</a>
+                <a href="index.html" class="colorHong"><i class="sy"></i>跨境通首页</a>
+            </div>
+            <!-- 右 -->
+            <div class="top-fr-list fr">
+                <ul class="topnav clear">
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="#" class="colorHong">请登入</a>-<a href="#" class="colorHong">免费注册</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="#" class="colorHong">我的订单</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt> 
+                                <a href="#" class="colorHong">我的关注</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">商品关注</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">店铺关注</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="colorHong">帮助中心</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">站点导航</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">在线申请</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="colorHong">商家入驻</a>
+                            </dt>
+                            <dd style="width:96px">
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">跨境贸易入驻</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">一般贸易入驻</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- headr -->
+    <div id="header">
+        <div class="margin wraper">       
+            <a href="#" class="logo">
+                <img src="http://www.kjt.com/Resources/themes/default/Nest/img/logo.png">
+            </a>
+            <a href="#" class="taobao_link inblock"></a>
+        </div>
+    </div>
+    <!-- main -->
+    <div id="main">
+        <form action="" method="get">
+            <input type="text" placeholder="用户名"><br /><input type="password" placeholder="密码"><br />
+            <input type="button" value="登录">
+            <p>没有账号？去<a href="register.html">注册</a></p>
+        </form>
+    </div>
+    <!-- footer -->
+    <div id="footer">
+        <div class="margin">
+            <div class="aside">
+                <div class="wraper">
+                    <p>Copyright 2019<span class="ml10">上海跨境通国际贸易有限公司</span><span class="ml10">All Rights Reserved.</span><a class="colorHong" href="#">沪ICP备14006635号-1</a></p>
+                </div>
+            </div>
+            <div class="footerIcon">
+                <div class="wraper">
+                    <a class="item7">上海工商</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
 </body>
+
+<script src="cookie.js"></script>
+<script>
+    var oBtn = document.getElementsByTagName('input');
+    oBtn[2].onclick = function(){
+        if(getCookie(oBtn[0].value) && getCookie(oBtn[0].value) == oBtn[1].value){//该账号存在且密码正确
+            alert('登陆成功!');
+            location.href = 'index.html';
+        }else{
+            alert('登录名或密码有误');
+        }
+    }
+</script>
+
 </html>
