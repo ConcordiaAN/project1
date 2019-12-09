@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* CSS Document */
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, dl, dd, fieldset, legend, input, textarea, select, figure {
+  margin: 0;
+  padding: 0; }
+
+a {
+  cursor: pointer; }
+
+body {
+  font: 12px  "宋体";
+  word-wrap: break-word; }
+
+a, u, s, del {
+  color: #666;
+  text-decoration: none; }
+
+fieldset, a img, .bor0 {
+  border: 0; }
+
+i, em, b {
+  font-style: normal;
+  font-weight: 100; }
+
+li {
+  list-style: none; }
+
+img {
+  vertical-align: middle; }
+
+table {
+  border-collapse: collapse; }
+
+/*table合并边框*/
+.ind2 {
+  text-indent: 2em; }
+
+input {
+  outline: none; }
+
+/* 去除google蓝框 */
+textarea {
+  resize: none; }
+
+/* 禁止拖动 */
+/*溢出隐藏出现省略号*/
+.over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*水平垂直对齐*/
+.valign {
+  text-align: center; }
+  .valign img {
+    vertical-align: middle; }
+  .valign:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+
+.clear:before {
+  content: "";
+  display: table; }
+
+.clear:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+/*margin-top:向上传递问题*/
+/*清除浮动*/
+.cc {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.xc {
+  display: flex;
+  justify-content: center; }
+
+.yc {
+  display: flex;
+  align-items: center; }
