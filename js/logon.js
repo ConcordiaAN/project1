@@ -1,4 +1,7 @@
 ;(function($){
+
+    // 登入
+
     class signin{
         constructor(){
             this.addEvent();

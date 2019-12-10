@@ -1,4 +1,7 @@
 ;(function ($) {
+
+    //  首页 - 国家馆  ---   选项卡
+
     // 选项卡
     //需求:鼠标点击那个li，让该li添加active类，下面的对应的.item的div添加selected
     $(".tab-hd").find("li").click(function () {
@@ -9,9 +12,7 @@
         //【重要】根据tab的索引值获取下方图片div的索引值
         $(".tab-bd>.item").eq($(this).index()).addClass("selected").siblings(".item").removeClass("selected");
         // console.log($(".selected"))
-
-        
-        
+   
     });
 
     $.ajax({	

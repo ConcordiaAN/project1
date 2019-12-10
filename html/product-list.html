@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品列表</title>
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/productlist.css">
     <script src="../assets/jquery.js"></script>
     <script src="../assets/jquery.pagination.js"></script>
@@ -1441,14 +1440,18 @@
         <!-- 分页 -->
         <div id="pagination"></div>
     </div>
-    
-
-
+ 
     <!-- 公共底部 -->
     <div class="public_f"></div>
 </body>
 
 <script>
+    // 公共头部、底部
+    $(".public_h").load("http://localhost/project/server/html/public.html .public_header")
+    $(".public_f").load("http://localhost/project/server/html/public.html .public_footer")
+</script>
+
+<!-- <script>
 
     // 公共头部、底部
     $(".public_h").load("http://localhost/project/server/html/public.html .public_header")
@@ -1500,7 +1503,7 @@
         }
     })
 
-</script>
+</script> -->
 <!-- <script src="../js/productlist.js"></script> -->
 <script src="../js/colorHong.js"></script>
 

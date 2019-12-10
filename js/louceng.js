@@ -1,5 +1,6 @@
 ;(function ($) {
-    
+    // 首页  ---  楼层
+
     $(".anchor").find("li").click(function(){
         // console.log($(this).index());
         
