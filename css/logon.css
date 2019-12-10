@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .margin {
   width: 1200px;
   margin: 0 auto; }
@@ -48,9 +49,8 @@
         border: 1px solid #ddd;
         position: absolute;
         top: 30px;
-        left: -2px; }
-      #top .top-fr-list .topnav li.dblock:hover dd {
-        display: block; }
+        left: -2px;
+        z-index: 1; }
 
 #header {
   background: #fff;
@@ -74,6 +74,63 @@
         width: 228px;
         right: 10px;
         top: 41px; }
+
+#Memberlogin {
+  width: 100%;
+  height: 530px;
+  position: relative; }
+  #Memberlogin .Memberlogin-l p {
+    font: 700 22px/30px "";
+    padding: 20px; }
+  #Memberlogin .Memberlogin-r {
+    width: 506px;
+    margin-top: 70px;
+    background: #fff;
+    padding: 40px 42px 120px 100px; }
+    #Memberlogin .Memberlogin-r .form {
+      height: 35px; }
+      #Memberlogin .Memberlogin-r .form h3 {
+        color: #090909;
+        font: normal 25px/35px "";
+        float: left; }
+      #Memberlogin .Memberlogin-r .form a {
+        font-size: 14 px;
+        float: right;
+        color: #08c;
+        padding: 10px; }
+    #Memberlogin .Memberlogin-r p {
+      text-align: left;
+      width: 100%;
+      color: #999;
+      line-height: 18px;
+      margin: 8px 0 6px 0; }
+    #Memberlogin .Memberlogin-r #text {
+      width: 248px;
+      padding: 6px 34px 6px 14px;
+      border: 1px solid #dedede;
+      float: none;
+      color: #999;
+      background-position: 245px 6px;
+      font: 12px/1.5 tahoma,arial,'Hiragino Sans GB',宋体,sans-serif; }
+    #Memberlogin .Memberlogin-r #pass {
+      height: 30px;
+      width: 248px;
+      padding: 0 34px 0 14px;
+      border: 1px solid #dedede;
+      float: none;
+      font-size: 14px;
+      color: #666; }
+    #Memberlogin .Memberlogin-r .login-v {
+      height: 35px;
+      margin-top: 60px; }
+      #Memberlogin .Memberlogin-r .login-v button {
+        width: 300px;
+        height: 35px;
+        font-size: 18px;
+        color: #fff;
+        background: #e13358;
+        border-radius: 4px;
+        border: 0; }
 
 #footer {
   padding: 0 0 20px;

@@ -1,0 +1,114 @@
+#register-main {
+  padding: 80px 0 40px 0; }
+  #register-main .content {
+    padding: 20px 0;
+    background: #fff; }
+    #register-main .content .register-main-l {
+      float: left;
+      width: 560px;
+      border-right: 1px solid #e5e5e5;
+      margin-left: 10px;
+      position: relative; }
+      #register-main .content .register-main-l h4 {
+        font: 700 20px/40px "";
+        height: 40px;
+        position: absolute;
+        top: -60px; }
+        #register-main .content .register-main-l h4 a {
+          display: inline-block;
+          padding: 0px 70px;
+          height: 40px; }
+          #register-main .content .register-main-l h4 a.active {
+            background: #f3f3f3;
+            color: #5e5e5e; }
+      #register-main .content .register-main-l .form {
+        margin-left: 74px; }
+        #register-main .content .register-main-l .form p {
+          text-align: left;
+          width: 100%;
+          color: #999;
+          height: auto;
+          line-height: 18px;
+          margin: 10px 0 6px 0; }
+          #register-main .content .register-main-l .form p i {
+            color: #ea0000;
+            margin-right: 5px; }
+        #register-main .content .register-main-l .form span {
+          color: orange; }
+        #register-main .content .register-main-l .form #pass {
+          width: 248px;
+          padding: 6px 34px 6px 14px;
+          border: 1px solid #dedede;
+          float: none;
+          font-size: 14px;
+          color: #666;
+          background-position: 245px -64px; }
+        #register-main .content .register-main-l .form #password {
+          width: 248px;
+          padding: 6px 34px 6px 14px;
+          border: 1px solid #dedede;
+          float: none;
+          font-size: 14px;
+          color: #666;
+          background-position: 245px -64px; }
+        #register-main .content .register-main-l .form #name {
+          border: 1px solid #cccccc;
+          padding: 6px 5px 6px 14px;
+          line-height: 18px; }
+        #register-main .content .register-main-l .form #tell {
+          border: 1px solid #cccccc;
+          padding: 6px 5px 6px 14px; }
+        #register-main .content .register-main-l .form #yanzheng {
+          width: 60px;
+          padding: 6px 0px 6px 14px; }
+      #register-main .content .register-main-l #text {
+        width: 248px;
+        padding: 6px 34px 6px 14px;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        color: #999999;
+        background-position: 245px 6px;
+        display: block;
+        float: none; }
+      #register-main .content .register-main-l .checklist {
+        margin: 30px 0 0 74px;
+        height: 45px; }
+        #register-main .content .register-main-l .checklist a {
+          color: #000;
+          line-height: 18px; }
+          #register-main .content .register-main-l .checklist a span {
+            text-decoration: underline;
+            line-height: 16px;
+            color: #6c6c6c; }
+            #register-main .content .register-main-l .checklist a span:hover {
+              color: #c40001; }
+      #register-main .content .register-main-l .login-v {
+        margin-left: 74px; }
+        #register-main .content .register-main-l .login-v button {
+          width: 300px;
+          height: 35px;
+          background: #c40001;
+          font-size: 18px;
+          color: #fff;
+          border-radius: 4px;
+          border: 0; }
+    #register-main .content .register-main-r {
+      float: right;
+      width: 450px;
+      margin-left: 40px;
+      margin-top: 15px;
+      color: #666;
+      font: 20px/50px "Microsoft Yahei"; }
+      #register-main .content .register-main-r img {
+        cursor: pointer; }
+      #register-main .content .register-main-r p {
+        margin: 25px 0 0 54px;
+        width: 117px;
+        text-align: center;
+        background: #eee;
+        border-radius: 6px; }
+        #register-main .content .register-main-r p a {
+          display: block;
+          width: 117px;
+          height: 40px;
+          line-height: 40px; }

@@ -114,7 +114,11 @@
 // header 部分
 header {
   height: 100px;
-  position: relative;
+  
+  background: #fff;
+  .pr {
+    position: relative;
+  }
   .headerLogo {
     height: 100%;
     width: 256px;
@@ -124,7 +128,7 @@ header {
         display: block;
         width: 162px;
         height: 52px;
-        margin-top: -25px;
+        margin-top: 25px;
         overflow: hidden;
         position: absolute;
         left: 44px;

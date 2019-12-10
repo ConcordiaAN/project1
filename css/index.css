@@ -84,7 +84,9 @@
 
 header {
   height: 100px;
-  position: relative; }
+  background: #fff; }
+  header .pr {
+    position: relative; }
   header .headerLogo {
     height: 100%;
     width: 256px;
@@ -93,7 +95,7 @@ header {
       display: block;
       width: 162px;
       height: 52px;
-      margin-top: -25px;
+      margin-top: 25px;
       overflow: hidden;
       position: absolute;
       left: 44px;
