@@ -1,0 +1,265 @@
+.ml10 {
+    margin-left: 10px;
+}
+.p10_0 {
+    padding: 10px 0;
+}
+#main {
+    .crumb {
+        border-bottom: 1px solid #f5f5f5;
+        background-position: left -56px;
+        margin-top: 3px;
+        padding-left: 0;
+        color: #c40000;
+        .inner {
+            
+            height: 30px;
+            line-height: 30px;
+            a {
+                color: #999;
+                &:hover {
+                    color: #c40000;
+
+                }
+            }
+        }
+    }
+    .proinfo {
+        position: relative;
+        z-index: 1;
+        background: #fff url("http://www.kjt.com/resources/themes/default/Nest/img/dotteboxB.gif") 479px top repeat-y;
+
+        .prozoom {
+            width: 450px;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .prodetail {
+            width: 720px;
+            color: #444;
+
+            .prodetail-title {
+                background: url("http://www.kjt.com/resources/themes/default/Nest/img/dotteboxB.gif") left bottom repeat-x;
+                padding: 10px 20px;
+                h1 {
+                    font-size: 18px;
+                    color: #333;
+                    font-weight: normal;
+                    font-family: "microsoft yahei";
+                    margin-bottom: 6px;
+                }
+            }
+            .mainPrice {
+                height: 36px;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 24px;
+            }
+            .label {
+                display: inline-block;
+                float: left;
+                width: 65px;
+            }
+            .prodetail-main {
+                position: relative;
+                .info {
+                    padding-right: 200px;
+                    width: 520px;
+                    background: url("http://www.kjt.com/resources/themes/default/Nest/img/dotteboxB.gif") 520px top repeat-y;
+                    .info-t {
+                        ul {
+                            
+                            .priceinfop {
+                                width: 499px;
+                                line-height: 88px;
+                                height: 88px;
+                                background: #f5f5f5;
+                                padding-left: 18px;
+                                padding-right: 1px;
+                                border: 1px solid #fff;
+                                border-width: 0 0 0 1px;
+                                margin-right: 1px;
+
+                                .price {
+                                    background: url("http://www.kjt.com/resources/themes/default/Nest/img/product_sprite.png") -197px 3px no-repeat;
+                                    padding-left: 20px;
+                                    margin-top: 30px!important;
+                                    margin-right: 10px;
+                                    position: relative;
+                                    color: #c40000;
+                                }
+                                a {
+                                    &.blueB {
+                                        color: #007ccf;
+                                    }
+                                }
+                                
+                            }
+                            .proinfoliB {
+                                background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                                padding: 7px 20px;  
+                                .icon_sales {
+                                    display: block;
+                                    padding-left: 71px;
+                                    padding-right: 40px;
+                                    padding-bottom: 2px;
+                                    .icon_s {
+                                        position: absolute;
+                                        margin-left: -71px;
+                                        display: inline-block;
+                                        height: 0;
+                                        padding-left: 0;
+                                        padding-top: 25px;
+                                        width: 71px;
+                                        overflow: hidden;
+                                        background-position: left -37px;
+                                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/prodetailprom.png") left 6px no-repeat;
+                                    }
+                                    a {
+                                        display: block;
+                                        padding: 6px 0 2px;
+                                        line-height: 1.5;
+                                    }
+                                    .red {
+                                        color: #c40000;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .info-c {
+                        clear: both;
+                        padding-left: 20px;
+                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                        ul {
+                            li {
+                                line-height: 30px;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                .label {
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .info-b {
+                        clear: both;
+                        padding-left: 20px;
+                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                        ul {
+                            li {
+                                line-height: 30px;
+                                padding-top: 5px;
+                                padding-bottom: 5px;
+                                .probtn {
+                                    padding: 15px 0;
+                                    overflow: hidden;
+                                    .btn_addcart {
+                                        width: 182px;
+                                        height: 44px;
+                                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/product_sprite.png") no-repeat;background-position: left -81px;
+                                    }
+                                    .btn_addfavor {
+                                        height: 44px;
+                                        background-position: left -169px;
+                                        margin-left: 50px;
+                                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/product_sprite.png") no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .saleStores {
+                    .storeArea {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-color: #fff;
+                        .mainStore {
+                            width: 173px;
+                            padding: 0 13px;
+                            background-color: #fff;
+                            .iconStore {
+                                position: relative;
+                                padding-top: 11px;
+                                padding-bottom: 11px;
+                                color: #333;
+                                display: block;
+                                padding-left: 39px;
+                                &:before {
+                                    display: inline-block;
+                                    position: absolute;
+                                    content: "";
+                                    height: 44px;
+                                    width: 35px;
+                                    left: 0;
+                                    top: 0;
+                                    background: url("http://www.kjt.com/resources/themes/default/Nest/img/prodetailprom.png") left -73px no-repeat;
+                                }
+                            }
+                            .shopinfo {
+                                background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                                color: #333;
+                                ul {
+                                    li {
+                                        height: 30px;
+                                        line-height: 30px;
+                                        label {
+                                            float: left;
+                                            display: inline;
+                                            color: #666;
+                                        }
+                                    }
+                                }
+                            }
+                            .certification {
+                                padding: 10px 0;
+                                background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                                color: #333;
+                                ul {
+                                    .customs {
+                                        height: 30px;
+                                        line-height: 30px;
+                                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/prodetailprom.png") 1px -160px no-repeat;
+                                        padding-left: 30px;
+                                    }
+                                    .CIQ {
+                                        height: 30px;
+                                        line-height: 30px;
+                                        background: url("http://www.kjt.com/resources/themes/default/Nest/img/prodetailprom.png") 1px -125px no-repeat;
+                                        padding-left: 30px;
+                                    }
+                                }
+                            }
+                            .action {
+                                background: url("http://www.kjt.com/resources/themes/default/Nest/img/dottelineB.gif") left top repeat-x;
+                                color: #333;
+                                li {
+                                    line-height: 30px;
+                                    padding-top: 5px;
+                                    padding-bottom: 5px;
+                                }
+                                .intoshop {
+                                    display: block;
+                                    background: url("http://www.kjt.com/resources/themes/default/Nest/img/product_sprite.png") no-repeat;
+                                    width: 132px;
+                                    height: 34px;
+                                    background-position: left -691px;
+                                }
+                                .favorites {
+                                    display: block;
+                                    background: url("http://www.kjt.com/resources/themes/default/Nest/img/product_sprite.png") no-repeat;
+                                    width: 132px;
+                                    height: 34px;
+                                    background-position: left -772px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
