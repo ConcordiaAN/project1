@@ -8,12 +8,163 @@
     <link rel="stylesheet" href="../css/public.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../assets/jquery.js"></script>
-    <script src="../assets/jquery.pagination.js"></script>
 </head>
 <body>
 
     <!-- 公共头部 -->
-    <div class="public_h"></div>
+    <!-- <div class="public_h"></div> -->
+
+    <!-- 顶部 -->
+    <div id="top" class="louceng">
+        <div class="margin clear">
+            <!-- 左 -->
+            <div class="user fl">
+                <a href="#" class="red"><i class="sc"></i>收藏跨境通</a>
+                <a href="index.html"  class="red"><i class="sy"></i>跨境通首页</a>
+            </div>
+            <!-- 右 -->
+            <div class="top-fr-list fr">
+                <ul class="topnav clear">
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="logon.html" class="red">请登入</a>-<a href="register.html" class="red">免费注册</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="#" class="red">我的订单</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt> 
+                                <a href="#" class="red">我的关注</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#" class="red">商品关注</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="red">店铺关注</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="red">帮助中心</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#" class="red">站点导航</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="red">在线申请</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="red">商家入驻</a>
+                            </dt>
+                            <dd style="width:96px">
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#" class="red">跨境贸易入驻</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="red">一般贸易入驻</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="margin pr clear">
+            <!-- logo -->
+            <div class="headerLogo fl">
+                <a href="#" class="logo">
+                    <img src="http://www.kjt.com/Resources/themes/default/Nest/img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- 搜索 -->
+            <div class="search">
+                <div class="form">
+                    <div class="inselect">
+                        <div class="inselect-item on">
+                            <span>商品</span>
+                        </div>
+                        <div class="inselect-item">
+                            <span>店铺</span>
+                        </div>
+                    </div>
+                    <input type="text" id="topSearch" tip="花王" class="intxt" maxlength="50">
+                    <a href="#" class="search-form-r">搜索</a>
+                </div>
+                <span class="hot">                           
+                    <a href="#" class="red">花王</a>
+                    <a href="#" class="red">Moony</a>
+                    <a href="#" class="red">爽身粉</a>
+                    <a href="#" class="red">纸尿裤</a>
+                    <a href="#" class="red">奶粉</a>
+                    <a href="#" class="red">护肤</a>
+                    <a href="#" class="red">膳魔师</a>
+                    <a href="#" class="red">高丝</a>
+                    <a href="#" class="red">马油</a>
+                    <a href="#" class="red">玫瑰露</a>
+                    <a href="#" class="red">Ecomaat</a>
+                    <a href="#" class="red">模型车</a>
+                </span>
+            </div>
+            <!-- 二维码 -->
+            <div class="draw-qr-box">
+                <div class="qr-box">
+                    <div class="qr-text fl">
+                        <h4>跨境通APP</h4>
+                        <p>坐拥全球</p>
+                        <p>精品好货</p>
+                    </div>
+                    <div class="qr-img fr">
+                        <img src="http://www.kjt.com/Resources/themes/default/Nest/img/qr56_56.jpg" alt="">
+                    </div>
+                </div>
+                <div class="qr-box-hover" style="display: none;">
+                    <img src="http://www.kjt.com/Resources/themes/default/Nest/img/qr100_100.jpg" alt="">
+                </div>
+            </div>
+            <!-- 购物车 -->
+            <div class="cartBar">
+                <em id="CarCTNRUrl">购物车</em>
+                <p>
+                    <em>0</em>
+                </p>
+            </div>
+        </div>
+    </header>
+
     <!-- 顶部导航 -->
     <nav class="menu clear">
         <div class="margin">
@@ -1403,22 +1554,22 @@
             <div class="navigation">
                 <ul class="clear">
                     <li class="noLine">
-                        <a href="#" class="item colorHong">精品母婴</a>
+                        <a href="#" class="item red">精品母婴</a>
                     </li>
                     <li class="noLine">
-                        <a href="#" class="item colorHong">个人护理</a>
+                        <a href="#" class="item red">个人护理</a>
                     </li>
                     <li class="noLine">
-                        <a href="#" class="item colorHong">居家生活</a>
+                        <a href="#" class="item red">居家生活</a>
                     </li>
                     <li class="noLine">
-                        <a href="#" class="item colorHong">营养保健</a>
+                        <a href="#" class="item red">营养保健</a>
                     </li>
                     <li class="noLine">
-                        <a href="#" class="item red">手机专享</a>
+                        <a href="#" class="item red1">手机专享</a>
                     </li>
                     <li class="noLine">
-                        <a href="#" class="item red">限时抢购</a>
+                        <a href="#" class="item red1">限时抢购</a>
                     </li>
                 </ul>
             </div>
