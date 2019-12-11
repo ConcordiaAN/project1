@@ -121,7 +121,7 @@
                 
             <table cellspacing="0" width="1200" align="center">
                 <thead>
-                    <tr>
+                    <tr style="text-align: center;">
                         <th><input type="checkbox" id="j_cbAll"/>全选</th>
                         <th>图片</th>
                         <th>名字</th>
@@ -131,7 +131,7 @@
                     </tr>
                 </thead>
                 <tbody class="qf">
-                    <tr>
+                    <tr style="text-align: center;">
                         <td colspan="5">购物车为空...<a href="product-list.html">去购物</a></td>
                     </tr>
                     <!--<tr>
@@ -167,88 +167,6 @@
 <script src="../assets/ajax.js"></script>
 <script src="../assets/cookie.js"></script>
 <script src="../js/shopping.js"></script>
-<script>
-    class Car{
-        constructor(){
-            this.url = "http://localhost/project/server/data/product-list.json";
-            this.tbody = document.querySelector("tbody");
-            
-            this.addEvent();
-            this.load()
-        }
-        load(){
-            ajaxGet(this.url,(res)=>{
-                this.res = JSON.parse(res);
-                
-                this.getCookie()
-            })
-        }
-        getCookie(){
-            this.goods = getCookie("goodsDECookie") ? JSON.parse(getCookie("goodsDECookie")) : [];
-            
-            this.display();
-        }
-        display(){
-            var str = "";
-            for(var i=0;i<this.res.length;i++){
-                
-                for(var j=0;j<this.goods.length;j++){
-                    console.log(j)
-                    if(this.res[i].id === this.goods[j].id){
-                        str += `<tr index="${this.res[i].id}">
-                                    <td><input type="checkbox"/></td>
-                                    <td><img src="${this.res[i].img}"/></td>
-                                    <td>${this.res[i].title}</td>
-                                    <td>${this.res[i].price}</td>
-                                    <td><input type="number" min=1 value="${this.goods[j].num}" /></td>
-                                    <td class="delete">删除</td>
-                                </tr>`;
-
-                    }
-                    
-                }
-            }
-            this.tbody.innerHTML = str;
-            
-        }
-        addEvent(){
-            var that = this;
-            this.tbody.addEventListener("click",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.className == "delete"){
-                    that.id = target.parentNode.getAttribute("index");
-                    target.parentNode.remove();
-                    that.changeCookie(function(i){
-                        that.goods.splice(i,1);
-                    });
-                }
-            })
-            this.tbody.addEventListener("input",function(eve){
-                var e = eve || window.event;
-                var target = e.target || e.srcElement;
-                if(target.tagName == "INPUT"){
-                    that.id = target.parentNode.parentNode.getAttribute("index");
-                    that.changeCookie(function(i){
-                        that.goods[i].num = target.value;
-                    })
-                }
-            })
-        }
-        changeCookie(cb){
-            for(var i=0;i<this.goods.length;i++){
-                if(this.id == this.goods[i].id){
-                    cb(i);
-                    break;
-                }
-            }
-            setCookie("goodsDECookie",JSON.stringify(this.goods))
-        }
-    }
-    
-    new Car;
-
-</script>
-
+<script src="../js/shoppingcar.js"></script>
 
 </html>

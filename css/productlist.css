@@ -152,7 +152,6 @@ header {
     border: solid 1px #ddd;
     height: 36px;
     line-height: 36px;
-    padding: 0 10px;
     position: absolute;
     right: 0;
     top: 30px;
@@ -177,6 +176,11 @@ header {
         color: #fff;
         font-size: 12px;
         overflow: hidden; }
+    header .cartBar a {
+      display: block;
+      width: 70px;
+      height: 40px;
+      text-align: center; }
 
 .search .hot {
   position: absolute;
@@ -406,7 +410,10 @@ header {
         border-radius: 5px;
         position: absolute;
         bottom: 10px;
-        right: 10px; }
+        right: 10px;
+        cursor: pointer; }
+        .main .productlist .productlist_inner #cont .box .addCar:active {
+          box-shadow: 0 0 5px #888; }
   .main #pagination {
     width: 560px;
     margin: 10px auto;

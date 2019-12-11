@@ -152,7 +152,6 @@ header {
     border: solid 1px #ddd;
     height: 36px;
     line-height: 36px;
-    padding: 0 10px;
     position: absolute;
     right: 0;
     top: 30px;
@@ -177,6 +176,11 @@ header {
         color: #fff;
         font-size: 12px;
         overflow: hidden; }
+    header .cartBar a {
+      display: block;
+      width: 70px;
+      height: 40px;
+      text-align: center; }
 
 .search .hot {
   position: absolute;
@@ -669,23 +673,27 @@ header {
 
 .anchor {
   width: 70px;
-  height: 224px;
+  height: 216px;
   position: fixed;
   right: 10px;
   top: 0;
   bottom: 0;
   margin: auto;
-  background: #ddd;
+  background: #c40000;
   text-align: center;
   font: 12px/30px "";
-  color: #333;
-  z-index: 1; }
+  color: #fff;
+  z-index: 1;
+  border-radius: 46px;
+  overflow: hidden; }
   .anchor li {
-    border: 1px solid #f37474; }
+    border-bottom: 1px solid #ddd; }
     .anchor li:hover {
-      color: #f13333;
+      color: #c40000;
       cursor: pointer;
-      background: #f2f2f2; }
+      background: #fff; }
+    .anchor li.te {
+      border: none; }
 
 footer {
   padding-top: 30px;

@@ -8,8 +8,9 @@
         });
 
         
-        $(".qf input:checkbox").click(function () {
-            
+        $(".checkbox").delegate().click(function () {
+            console.log(1)
+            console.log($(".qf input:checked").length)
             if ($(".qf input:checkbox").length === $(".qf input:checked").length) {
                 
                 $("#j_cbAll").prop("checked", true);

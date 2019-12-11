@@ -40,7 +40,7 @@
                     str += '<li>'+ 
                                 '<div class="inner">'+
                                     '<div class="img-wrap">'+
-                                        '<a href="#">'+
+                                        '<a href="particulars.html">'+
                                             '<img src="'+ group[i].img +'">'
                                         +'</a>'
                                     +'</div>'

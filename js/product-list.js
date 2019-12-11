@@ -1,70 +1,81 @@
-;(function ($) {
+;(function () {
 
-// 商品列表
- 
-$('.setPageDiv').change(function() {
-
-    getMsg(parseInt($(this).val()))
-})
-
-function getMsg(num) {
-    $.ajax({
-        url: 'http://localhost/project/server/data/product-list.json',
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            //1.计算分页数量
-            var showNum = num;
-            var dataL = data.list.length;
-            var pageNum = Math.ceil(dataL / showNum);
-            $('.Pagination').pagination(pageNum, {
-                num_edge_entries: 1, //边缘页数
-                num_display_entries: 4, //主体页数
-                items_per_page: 1, //每页显示1项
-                prev_text: "上一页",
-                next_text: "下一页",
-                callback: function(index) {
-                    //console.log(index);
-                    var html = '<ul>'
-
-                    // console.log(showNum * index + '~' + parseInt(showNum * index) + parseInt(showNum))
-                    for(var i = showNum * index; i < showNum * index + showNum; i++) {
-                        //console.log(i)
-                        if(i < dataL) {
-
-                            var img = data.list[i].img;
-                            var title = data.list[i].title;
-                            var price = data.list[i].price; 
-                            var discount = data.list[i].discount;
-                            html += "<li inadex='"+data.list[i].id+"'>"
-                            html += "<div class='inner'>"
-                            html += "<a href='particulars.html'>"
-                            html += "<img src='" + img + "'>"
-                            html += "</a>"
-                            html += "</div>"
-                            html += "<a href='#' class='.pro-name'>"
-                            html +=  title 
-                            html += "<div class='pro-price'>"
-                            html += "<span class='price-now'>" + price + "</span>"
-                            html += "<em class='price-old'>" + discount + "</em>"
-                            html += "</div>"
-                            html += "</a>"
-                            html += "<em class='addCar'>加入购物车</em>"
-                            html += "</div>"
-                            html += "</li>"
-
-                        }
-                    }
-                    html += '</ul>';
-                    $('.list').html(html)
+    class List{
+        constructor(){
+            this.url = "http://localhost/project/server/data/product-list.json";
+            this.cont = document.getElementById("cont");
+            
+            this.load()
+            this.addEvent();
+        }
+        load(){
+            var that = this;
+            ajaxGet(this.url,function(res){
+                that.res = JSON.parse(res)
+                that.display();
+            })
+        }
+        display(){
+            var str = ""
+            for(var i=0;i<this.res.length;i++){
+                str += `<div class="box" index="${this.res[i].id}">
+                            <img src="${this.res[i].img}" alt="">
+                            <p>${this.res[i].title}</p>
+                            <span>${this.res[i].price}</span>
+                            <em class="addCar">加入购物车</em>
+                        </div>`;
+            }
+            this.cont.innerHTML = str;
+        }
+        addEvent(){
+            var that = this;
+            this.cont.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "addCar"){
+                    that.id = target.parentNode.getAttribute("index");
+    //						console.log(that.id)
+                    that.setCookie();
+                }else if(target.nodeName =="IMG" || target.nodeName =="P" || target.nodeName =="SPAN"){
+                        location.href="particulars.html"
+    
                 }
             })
-
         }
-    })
-}
-getMsg(6)
+        setCookie(){
+            
+            this.goods = getCookie("goodsDECookie") ? JSON.parse(getCookie("goodsDECookie")) : [];
+            
+    //				第一次加入购物车
+            if(this.goods.length < 1){
+    //					直接加入
+                this.goods.push({
+                    id:this.id,
+                    num:1
+                })
+            }else{
+    
+                var i = 0;
+                var onoff = this.goods.some((val,idx)=>{
+                    i = idx;
+                    return val.id === this.id;
+                })
+    //					新商品,增加
+                if(!onoff){
+                    this.goods.push({
+                        id:this.id,
+                        num:1
+                    })
+                }else{
+                    this.goods[i].num++;
+                }
+            }
+            setCookie("goodsDECookie",JSON.stringify(this.goods))
+        }
+    }
+    
+    new List;
 
+    window.List = List;
 
-
-})(jQuery);
+})(window);
