@@ -1,0 +1,195 @@
+.margin {
+    width: 1200px;
+    margin: 0 auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.colorHong {
+    &:hover {
+        color: #e13358;
+    }
+}
+.ml10 {
+    margin-left: 10px;
+}
+
+#top {
+    height: 30px;
+    line-height: 29px;
+    color: #888;
+    position: relative;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #eaeaea;
+
+    .user {
+        a {
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+            i {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                &.sc {
+                    background: url("../assets/images/collection.png") no-repeat center;
+                    background-size: 155%;
+                }
+                &.sy {
+                    background: url("../assets/images/home.png") no-repeat center;
+                    background-size: 155%;
+                }
+            
+            }
+        }
+
+        
+    }
+
+    .top-fr-list {
+        width: 402px;
+        .topnav {
+            li {
+                padding: 0 12px;
+                position: relative;
+
+                &.dblock {
+                    dd {
+                        display: none;
+                        background: #fff;
+                        border: 1px solid #ddd;
+                        position: absolute;
+                        top:30px;
+                        left: -2px;
+                        z-index: 1;
+                    }
+                    // &:hover {
+                    //     dd {
+                    //         display: block;
+                    //     }
+                    // }
+                }
+
+            }
+        }
+    }
+}
+
+#header {
+    background: #fff;
+    border-bottom: 2px solid #e13358;
+    height: 107px;
+    width: 100%;
+    .wraper {
+        height: 101px;
+        position: relative; 
+        a {
+            display: inline-block;
+            position: absolute;
+            color: #666;
+            &.logo{
+                width:162px;
+                height:52px;
+                top: 29px;
+            }
+            
+        }
+        .step {
+            overflow: hidden;
+            height: 60px;
+            width: 538px;
+            margin-top: 28px;
+            background: url("https://ssl.kjt.com/Resources/themes/default/Nest/img/step_shopping_cart.png") no-repeat;
+        }
+    }
+}
+
+#main {
+    .pr {
+        position: relative;
+    }
+    
+    .go {
+        position: absolute;
+        top: -50px;
+        right: 100px;
+        background: #e13358;
+        
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        a {
+            color: #fff;
+            display: block;
+            width: 80px;
+            height: 30px;
+        }
+    }
+
+    table {
+        margin-top: 70px;
+        thead {
+            line-height: 30px;
+            text-align: center;
+            background: #c40000;
+            color: #fff;
+        }
+        tbody {
+            background: #fff;
+            tr{
+                td {
+                    width: 0px;
+                    padding: 0 10px;
+                    img {
+                        display: inline-block;
+                        width: 250px;
+                        height: 250px;
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+#footer {
+    padding: 0 0 20px;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f1;
+    text-align: center;
+    .wraper {
+        position: relative;
+    }
+    .aside {
+        margin-top: 35px;
+        border-top: 1px solid #ebebeb;
+        color: #999;
+        .wraper {
+            margin-top: -1px;
+            background-color: #fff;
+            border-top: 1px solid #ebebeb;
+            padding-top: 20px;
+            p {
+                margin-top: 20px;
+                padding-bottom: 3px;
+            }
+        }
+    }
+    .footerIcon {
+        .item7 {
+            background-position: left -276px;
+            width: 126px;
+            height: 45px;
+            display: inline-block;
+            background: url("http://www.kjt.com/Resources/themes/default/Nest/img/certi.png") no-repeat;
+            font-size: 0;
+        }
+    }
+}

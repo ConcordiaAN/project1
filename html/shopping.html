@@ -4,9 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/shopping.css">
+
+    <script src="../assets/jquery.js"></script>
+
 </head>
 <body>
-    购物车
+    <!-- top -->
+    <div id="top">
+        <div class="margin clear">
+            <!-- 左 -->
+            <div class="user fl">
+                <a href="#" class="colorHong"><i class="sc"></i>收藏跨境通</a>
+                <a href="index.html" class="colorHong"><i class="sy"></i>跨境通首页</a>
+            </div>
+            <!-- 右 -->
+            <div class="top-fr-list fr">
+                <ul class="topnav clear">
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="###" class="colorHong">请登入</a>-<a href="register.html" class="colorHong">免费注册</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl">
+                        <dl>
+                            <dt>
+                                <a href="#" class="colorHong">我的订单</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt> 
+                                <a href="#" class="colorHong">我的关注</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">商品关注</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">店铺关注</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="colorHong">帮助中心</a>
+                            </dt>
+                            <dd>
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">站点导航</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">在线申请</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fl dblock">
+                        <dl class="expand">
+                            <dt>
+                                <a href="#" class="colorHong">商家入驻</a>
+                            </dt>
+                            <dd style="width:96px">
+                                <div class="inner">
+                                    <ol>
+                                        <li>
+                                            <a href="#">跨境贸易入驻</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">一般贸易入驻</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- headr -->
+    <div id="header">
+        <div class="margin wraper">       
+            <a href="#" class="logo">
+                <img src="http://www.kjt.com/Resources/themes/default/Nest/img/logo.png">
+            </a>
+            <ol class="step fr">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 内容 -->
+    <div id="main">
+        <div class="margin pr">
+            <div class="go">
+                <a href="product-list.html">继续购物</a>
+            </div>
+                
+            <table cellspacing="0" width="1200" align="center">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="j_cbAll"/>全选</th>
+                        <th>图片</th>
+                        <th>名字</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>删除</th>
+                    </tr>
+                </thead>
+                <tbody class="qf">
+                    <tr>
+                        <td colspan="5">购物车为空...<a href="product-list.html">去购物</a></td>
+                    </tr>
+                    <!--<tr>
+                        <td><img src=""/></td>
+                        <td></td>
+                        <td></td>
+                        <td><input type="number" min=1/></td>
+                        <td class="delete">删除</td>
+                    </tr>-->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="margin">
+            <div class="aside">
+                <div class="wraper">
+                    <p>Copyright 2019<span class="ml10">上海跨境通国际贸易有限公司</span><span class="ml10">All Rights Reserved.</span><a class="colorHong" href="#">沪ICP备14006635号-1</a></p>
+                </div>
+            </div>
+            <div class="footerIcon">
+                <div class="wraper">
+                    <a class="item7">上海工商</a>
+                </div>
+            </div>
+        </div>    
+    </div>
 </body>
+
+<script src="../assets/ajax.js"></script>
+<script src="../assets/cookie.js"></script>
+<script src="../js/shopping.js"></script>
+<script>
+    class Car{
+        constructor(){
+            this.url = "http://localhost/project/server/data/product-list.json";
+            this.tbody = document.querySelector("tbody");
+            
+            this.addEvent();
+            this.load()
+        }
+        load(){
+            ajaxGet(this.url,(res)=>{
+                this.res = JSON.parse(res);
+                
+                this.getCookie()
+            })
+        }
+        getCookie(){
+            this.goods = getCookie("goodsDECookie") ? JSON.parse(getCookie("goodsDECookie")) : [];
+            
+            this.display();
+        }
+        display(){
+            var str = "";
+            for(var i=0;i<this.res.length;i++){
+                
+                for(var j=0;j<this.goods.length;j++){
+                    console.log(j)
+                    if(this.res[i].id === this.goods[j].id){
+                        str += `<tr index="${this.res[i].id}">
+                                    <td><input type="checkbox"/></td>
+                                    <td><img src="${this.res[i].img}"/></td>
+                                    <td>${this.res[i].title}</td>
+                                    <td>${this.res[i].price}</td>
+                                    <td><input type="number" min=1 value="${this.goods[j].num}" /></td>
+                                    <td class="delete">删除</td>
+                                </tr>`;
+
+                    }
+                    
+                }
+            }
+            this.tbody.innerHTML = str;
+            
+        }
+        addEvent(){
+            var that = this;
+            this.tbody.addEventListener("click",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.className == "delete"){
+                    that.id = target.parentNode.getAttribute("index");
+                    target.parentNode.remove();
+                    that.changeCookie(function(i){
+                        that.goods.splice(i,1);
+                    });
+                }
+            })
+            this.tbody.addEventListener("input",function(eve){
+                var e = eve || window.event;
+                var target = e.target || e.srcElement;
+                if(target.tagName == "INPUT"){
+                    that.id = target.parentNode.parentNode.getAttribute("index");
+                    that.changeCookie(function(i){
+                        that.goods[i].num = target.value;
+                    })
+                }
+            })
+        }
+        changeCookie(cb){
+            for(var i=0;i<this.goods.length;i++){
+                if(this.id == this.goods[i].id){
+                    cb(i);
+                    break;
+                }
+            }
+            setCookie("goodsDECookie",JSON.stringify(this.goods))
+        }
+    }
+    
+    new Car;
+
+</script>
+
+
 </html>

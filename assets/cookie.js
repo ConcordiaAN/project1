@@ -1,36 +1,31 @@
-function createCookie(key,value,expires,domain,secure){
-    var cookieText = encodeURIComponent(key) + "=" + encodeURIComponent(value) + ";path=/";
-    if(!isNaN(expires)){
-        if(typeof expires == "number" && expires > 0){
-            var date = new Date();
-            date.setDate(date.getDate() + expires);
-            cookieText += ";expires=" + date;
-        }
-    }
-    if(domain){
-        cookieText += ";domain=" + domain;
-    }
-    if(secure){
-        cookieText += ";secure";
-    }
-    document.cookie = cookieText;
-}
-
-//获取cookie
 function getCookie(key){
-    var keyText = encodeURIComponent(key) + "="
-    var start = document.cookie.indexOf(keyText); //找到开始位置
-    if(start != -1){
-        var end = document.cookie.indexOf(";",start); //找到结束位置
-        if(end == -1){
-            end = document.cookie.length;
-        }
-        var cookieValue = decodeURIComponent(document.cookie.substring(start + keyText.length,end));
-    }
-    return cookieValue;
+	var arr = document.cookie.split("; ");
+	for(var i=0;i<arr.length;i++){
+		if(arr[i].split("=")[0] == key){
+			return arr[i].split("=")[1];
+		}
+	}
+	return "";
 }
 
-//删除cookie
-function removeCookie(key){
-    document.cookie = key + "=;expires=" + new Date(0) + ";path=/";
+
+function removeCookie(key,options){
+	options = options || {};
+	setCookie(key,null,{
+		expires:-1,
+		path:options.path
+	})
+}
+
+
+function setCookie(key,val,options){
+	options = options || {};
+	var p = options.path ? ";path="+options.path : "";
+	var e = "";
+	if(options.expires){
+		var d = new Date();
+		d.setDate(d.getDate()+options.expires)
+		e = ";expires="+d;
+	}
+	document.cookie = key+"="+ val + e + p;
 }

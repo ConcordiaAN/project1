@@ -495,23 +495,36 @@
     background: #fff;
     .productlist { 
       .productlist_inner {   
-        .list{
+        #cont{
             margin-top: 20px;
-            height: 674px; 
-            width: 882px;
-            padding:10px 159px;
-            li{
-                float: left;
-                width: 260px;
-                height: 300px;
-                padding: 12px;
-                margin-left: 8px;
-                margin-top: 11px;
-                border: 1px solid #eee;
-                position: relative;
-                &:hover {
-                    box-shadow: 0 0 6px #eee;
-                }
+            height: 980px; 
+            
+            
+            .box{
+              float: left;
+              width: 260px;
+              height: 300px;
+              padding: 12px;
+              margin-left: 8px;
+              margin-top: 11px;
+              border: 1px solid #eee;
+              position: relative;
+              &:hover {
+                  box-shadow: 0 0 6px #eee;
+              }
+              .addCar {
+                width: 80px;
+                display: block;
+                background: #da2626;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #fff;
+                border-radius: 5px;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+              }
             }
         }
       }

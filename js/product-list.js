@@ -36,7 +36,7 @@ function getMsg(num) {
                             var title = data.list[i].title;
                             var price = data.list[i].price; 
                             var discount = data.list[i].discount;
-                            html += "<li>"
+                            html += "<li inadex='"+data.list[i].id+"'>"
                             html += "<div class='inner'>"
                             html += "<a href='particulars.html'>"
                             html += "<img src='" + img + "'>"
@@ -49,6 +49,7 @@ function getMsg(num) {
                             html += "<em class='price-old'>" + discount + "</em>"
                             html += "</div>"
                             html += "</a>"
+                            html += "<em class='addCar'>加入购物车</em>"
                             html += "</div>"
                             html += "</li>"
 
@@ -63,7 +64,6 @@ function getMsg(num) {
     })
 }
 getMsg(6)
-
 
 
 
