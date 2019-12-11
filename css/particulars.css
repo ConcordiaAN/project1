@@ -24,8 +24,63 @@
   background: #fff url("http://www.kjt.com/resources/themes/default/Nest/img/dotteboxB.gif") 479px top repeat-y; }
   #main .proinfo .prozoom {
     width: 450px;
-    padding: 15px;
     overflow: hidden; }
+    #main .proinfo .prozoom .bigimg .sBox {
+      width: 450px;
+      height: 450px; }
+      #main .proinfo .prozoom .bigimg .sBox img {
+        width: 450px;
+        height: 450px; }
+      #main .proinfo .prozoom .bigimg .sBox span {
+        background: url("http://image.kjt.com/g1/M00/00/28/CgoJzVqmK3yAT6chAABi6cRAlqc845_P450.jpg");
+        background-size: 450px 450px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none; }
+    #main .proinfo .prozoom .bigimg .bBox {
+      z-index: 1;
+      width: 450px;
+      height: 450px;
+      position: absolute;
+      left: 480px;
+      top: 0;
+      overflow: hidden;
+      display: none;
+      border: #c40000 1px solid; }
+      #main .proinfo .prozoom .bigimg .bBox img {
+        width: 900px;
+        height: 900px;
+        position: absolute; }
+    #main .proinfo .prozoom .proshareB {
+      height: 16px;
+      line-height: 16px;
+      overflow: hidden;
+      padding: 15px 15px 15px 15px; }
+      #main .proinfo .prozoom .proshareB span {
+        background: url("http://www.kjt.com/resources/themes/default/Nest/img/shareicon.png") left -112px no-repeat;
+        padding-left: 20px; }
+      #main .proinfo .prozoom .proshareB a {
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+        width: 16px;
+        padding-right: 16px;
+        background-image: url("http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=91362611.png");
+        background-repeat: no-repeat;
+        cursor: pointer; }
+      #main .proinfo .prozoom .proshareB .bds_sqq {
+        background-position: 0 -2652px; }
+      #main .proinfo .prozoom .proshareB .bds_tsina {
+        background-position: 0 -104px; }
+      #main .proinfo .prozoom .proshareB .bds_weixin {
+        background-position: 0 -1612px; }
+      #main .proinfo .prozoom .proshareB .bds_tqq {
+        background-position: 0 -260px; }
+      #main .proinfo .prozoom .proshareB .bds_qzone {
+        background-position: 0 -52px; }
   #main .proinfo .prodetail {
     width: 720px;
     color: #444; }
@@ -194,3 +249,52 @@
               width: 132px;
               height: 34px;
               background-position: left -772px; }
+
+#main .details {
+  margin-top: 10px; }
+  #main .details .details-nav {
+    font-size: 16px;
+    color: #333;
+    height: 36px;
+    line-height: 36px; }
+    #main .details .details-nav .nav-l p {
+      width: 213px;
+      font-weight: 700; }
+    #main .details .details-nav .nav-c a {
+      color: #333;
+      padding: 0 10px; }
+      #main .details .details-nav .nav-c a:hover {
+        color: #c40000; }
+      #main .details .details-nav .nav-c a.active {
+        font-weight: 700;
+        color: #c40000; }
+  #main .details .details-main .main-l {
+    width: 213px;
+    height: 227px;
+    margin-top: 10px;
+    background: #fff;
+    padding-left: 10px; }
+    #main .details .details-main .main-l ul li {
+      position: relative;
+      top: 1px;
+      float: left;
+      width: 96px;
+      background: url("http://www.kjt.com/resources/themes/default/Nest/img/line_doteA.png") left bottom repeat-x;
+      line-height: 26px;
+      height: 27px;
+      overflow: hidden; }
+      #main .details .details-main .main-l ul li a {
+        color: #626164;
+        padding-left: 16px;
+        display: block;
+        line-height: 26px;
+        background: url("http://www.kjt.com/resources/themes/default/Nest/img/dotlist.gif") 6px 13px no-repeat;
+        height: 27px; }
+  #main .details .details-main .main-r {
+    width: 927px; }
+    #main .details .details-main .main-r .main-r-t {
+      background: #fff; }
+    #main .details .details-main .main-r .main-r-b {
+      background: #fff;
+      padding: 25px;
+      margin-top: 10px; }
