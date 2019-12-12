@@ -12,9 +12,9 @@
         duration: 500 // 可选， 默认为300 -- 动画时长
     })
     
-    // 公共头部、底部
-    $(".public_h").load("http://localhost/project/server/html/public.html .public_header")
-    $(".public_f").load("http://localhost/project/server/html/public.html .public_footer")
+    // // 公共头部、底部
+    // $(".public_h").load("http://localhost/project/server/html/public.html .public_header")
+    // $(".public_f").load("http://localhost/project/server/html/public.html .public_footer")
     
 
     $("dl.expand").mouseenter(function () {
@@ -37,5 +37,6 @@
         $(this).css("color",color);
     })
 
+    
 
 })(jQuery);

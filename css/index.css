@@ -464,7 +464,7 @@ header {
     height: 420px; }
     .main .main-gjg .main-tab-box .tab-hd {
       width: 1200px; }
-      .main .main-gjg .main-tab-box .tab-hd .item {
+      .main .main-gjg .main-tab-box .tab-hd span {
         float: left;
         width: 239px;
         border-right: 1px solid #f5f5f5;
@@ -474,12 +474,12 @@ header {
         font-size: 16px;
         text-align: center;
         color: #fff; }
-        .main .main-gjg .main-tab-box .tab-hd .item.active {
+        .main .main-gjg .main-tab-box .tab-hd span.on {
           position: relative;
           width: 239px;
           background-color: #fff;
           color: #ff5252; }
-          .main .main-gjg .main-tab-box .tab-hd .item.active:after {
+          .main .main-gjg .main-tab-box .tab-hd span.on:after {
             content: "";
             position: absolute;
             top: -3px;
@@ -487,189 +487,192 @@ header {
             width: 100%;
             height: 3px;
             background-color: #ff5252; }
-    .main .main-gjg .main-tab-box .tab-bd .item {
-      display: none;
-      position: relative; }
-      .main .main-gjg .main-tab-box .tab-bd .item.selected {
-        display: block; }
-      .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p {
-        padding: 20px 0;
-        background-color: #fff; }
-        .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li {
-          float: left;
-          width: 214px;
-          height: 300px;
-          padding: 3px 13px; }
-          .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner {
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            transition: .4s; }
-            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .img-wrap img {
+    .main .main-gjg .main-tab-box .tab-bd {
+      position: relative;
+      padding: 20px 0;
+      background-color: #fff; }
+      .main .main-gjg .main-tab-box .tab-bd li {
+        float: left;
+        width: 214px;
+        height: 300px;
+        padding: 3px 13px; }
+        .main .main-gjg .main-tab-box .tab-bd li .inner {
+          width: 100%; }
+          .main .main-gjg .main-tab-box .tab-bd li .inner a {
+            display: block;
+            width: 240px;
+            height: 240px; }
+            .main .main-gjg .main-tab-box .tab-bd li .inner a img {
               height: 194px;
               width: 194px; }
-            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner a {
-              color: #666; }
-            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-name {
-              margin: 10px 0; }
-            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-price .price-now {
-              font-size: 16px;
-              color: #ff2b2b;
-              margin-right: 10px; }
-            .main .main-gjg .main-tab-box .tab-bd .item .pro-list-p li .inner .pro-price .price-old {
-              font-size: 14px;
-              color: #aaa;
-              text-decoration: line-through; }
-  .main .main-mzgh {
-    padding-top: 30px; }
-    .main .main-mzgh .main-mzgh-box {
-      height: 400px;
-      margin-bottom: 30px; }
-      .main .main-mzgh .main-mzgh-box .main-mzgh-l {
-        height: 400px;
-        width: 300px; }
-        .main .main-mzgh .main-mzgh-box .main-mzgh-l a {
-          width: 300px; }
-          .main .main-mzgh .main-mzgh-box .main-mzgh-l a img {
-            width: 100%;
-            height: 100%;
-            display: block; }
-      .main .main-mzgh .main-mzgh-box .main-mzgh-r {
-        width: 900px;
-        height: 400px; }
-        .main .main-mzgh .main-mzgh-box .main-mzgh-r a {
-          width: 299px;
-          height: 199px;
-          float: left;
-          margin-bottom: 1px;
-          margin-right: 1px; }
-          .main .main-mzgh .main-mzgh-box .main-mzgh-r a img {
-            width: 299px;
-            height: 199px;
-            display: block;
-            box-shadow: 0 0 2px #ccc; }
-  .main .main-myyp .main-myyp-box {
+          .main .main-gjg .main-tab-box .tab-bd li .inner a {
+            color: #666; }
+          .main .main-gjg .main-tab-box .tab-bd li .inner .pro-name {
+            padding: 10px; }
+          .main .main-gjg .main-tab-box .tab-bd li .inner .pro-price .price-now {
+            font-size: 16px;
+            color: #ff2b2b;
+            margin-right: 10px; }
+          .main .main-gjg .main-tab-box .tab-bd li .inner .pro-price .price-old {
+            font-size: 14px;
+            color: #aaa;
+            text-decoration: line-through; }
+
+.main-mzgh {
+  padding-top: 30px; }
+  .main-mzgh .main-mzgh-box {
     height: 400px;
     margin-bottom: 30px; }
-    .main .main-myyp .main-myyp-box .main-myyp-l {
+    .main-mzgh .main-mzgh-box .main-mzgh-l {
       height: 400px;
       width: 300px; }
-      .main .main-myyp .main-myyp-box .main-myyp-l a {
+      .main-mzgh .main-mzgh-box .main-mzgh-l a {
         width: 300px; }
-        .main .main-myyp .main-myyp-box .main-myyp-l a img {
+        .main-mzgh .main-mzgh-box .main-mzgh-l a img {
           width: 100%;
           height: 100%;
           display: block; }
-    .main .main-myyp .main-myyp-box .main-myyp-r {
+    .main-mzgh .main-mzgh-box .main-mzgh-r {
       width: 900px;
       height: 400px; }
-      .main .main-myyp .main-myyp-box .main-myyp-r a {
+      .main-mzgh .main-mzgh-box .main-mzgh-r a {
         width: 299px;
         height: 199px;
         float: left;
         margin-bottom: 1px;
         margin-right: 1px; }
-        .main .main-myyp .main-myyp-box .main-myyp-r a img {
+        .main-mzgh .main-mzgh-box .main-mzgh-r a img {
           width: 299px;
           height: 199px;
           display: block;
           box-shadow: 0 0 2px #ccc; }
-  .main .main-spbj .main-spbj-box {
+
+.main-myyp .main-myyp-box {
+  height: 400px;
+  margin-bottom: 30px; }
+  .main-myyp .main-myyp-box .main-myyp-l {
     height: 400px;
-    margin-bottom: 30px; }
-    .main .main-spbj .main-spbj-box .main-spbj-l {
-      height: 400px;
+    width: 300px; }
+    .main-myyp .main-myyp-box .main-myyp-l a {
       width: 300px; }
-      .main .main-spbj .main-spbj-box .main-spbj-l a {
-        width: 300px; }
-        .main .main-spbj .main-spbj-box .main-spbj-l a img {
-          width: 100%;
-          height: 100%;
-          display: block; }
-    .main .main-spbj .main-spbj-box .main-spbj-r {
-      width: 900px;
-      height: 400px; }
-      .main .main-spbj .main-spbj-box .main-spbj-r a {
-        width: 299px;
-        height: 199px;
-        float: left;
-        margin-bottom: 1px;
-        margin-right: 1px;
-        display: block; }
-        .main .main-spbj .main-spbj-box .main-spbj-r a img {
-          width: 299px;
-          height: 199px;
-          display: block;
-          box-shadow: 0 0 2px #ccc; }
-  .main .main-plzx .main-plzx-box {
-    width: 1200px;
-    height: 400px;
-    margin-bottom: 30px; }
-    .main .main-plzx .main-plzx-box a {
-      width: 300px;
-      height: 200px;
-      float: left;
-      display: block; }
-      .main .main-plzx .main-plzx-box a img {
+      .main-myyp .main-myyp-box .main-myyp-l a img {
         width: 100%;
         height: 100%;
+        display: block; }
+  .main-myyp .main-myyp-box .main-myyp-r {
+    width: 900px;
+    height: 400px; }
+    .main-myyp .main-myyp-box .main-myyp-r a {
+      width: 299px;
+      height: 199px;
+      float: left;
+      margin-bottom: 1px;
+      margin-right: 1px; }
+      .main-myyp .main-myyp-box .main-myyp-r a img {
+        width: 299px;
+        height: 199px;
         display: block;
         box-shadow: 0 0 2px #ccc; }
-  .main .main-ban {
-    width: 1200px;
-    height: 120px;
-    margin-bottom: 30px; }
-  .main .layout .stfloor {
+
+.main-spbj .main-spbj-box {
+  height: 400px;
+  margin-bottom: 30px; }
+  .main-spbj .main-spbj-box .main-spbj-l {
+    height: 400px;
+    width: 300px; }
+    .main-spbj .main-spbj-box .main-spbj-l a {
+      width: 300px; }
+      .main-spbj .main-spbj-box .main-spbj-l a img {
+        width: 100%;
+        height: 100%;
+        display: block; }
+  .main-spbj .main-spbj-box .main-spbj-r {
+    width: 900px;
+    height: 400px; }
+    .main-spbj .main-spbj-box .main-spbj-r a {
+      width: 299px;
+      height: 199px;
+      float: left;
+      margin-bottom: 1px;
+      margin-right: 1px;
+      display: block; }
+      .main-spbj .main-spbj-box .main-spbj-r a img {
+        width: 299px;
+        height: 199px;
+        display: block;
+        box-shadow: 0 0 2px #ccc; }
+
+.main-plzx .main-plzx-box {
+  width: 1200px;
+  height: 400px;
+  margin-bottom: 30px; }
+  .main-plzx .main-plzx-box a {
+    width: 300px;
+    height: 200px;
+    float: left;
+    display: block; }
+    .main-plzx .main-plzx-box a img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-shadow: 0 0 2px #ccc; }
+
+.main-ban {
+  width: 1200px;
+  height: 120px;
+  margin-bottom: 30px; }
+
+.layout .stfloor {
+  height: 243px;
+  background: #fff; }
+  .layout .stfloor .authorBox {
+    width: 376px;
     height: 243px;
-    background: #fff; }
-    .main .layout .stfloor .authorBox {
-      width: 376px;
-      height: 243px;
-      overflow: hidden; }
-      .main .layout .stfloor .authorBox .floorTit {
-        padding-left: 15px;
-        height: 53px;
-        line-height: 53px;
-        border-bottom: 1px solid #f5f5f5; }
-        .main .layout .stfloor .authorBox .floorTit h2 {
-          line-height: 53px; }
-      .main .layout .stfloor .authorBox .authorList {
-        border-bottom: 1px solid #e5e5e5; }
-        .main .layout .stfloor .authorBox .authorList img {
-          margin: 0 auto; }
-        .main .layout .stfloor .authorBox .authorList li {
-          padding-bottom: 8px; }
-        .main .layout .stfloor .authorBox .authorList span {
-          font-size: 18px;
-          font-weight: normal;
-          display: block;
-          margin-top: 10px; }
-        .main .layout .stfloor .authorBox .authorList em {
-          font-size: 11px;
-          font-style: normal;
-          letter-spacing: -1px; }
-        .main .layout .stfloor .authorBox .authorList .item_CHO {
-          width: 166px;
-          border-right: 1px solid #e5e5e5;
-          text-align: center; }
-        .main .layout .stfloor .authorBox .authorList .item_AEC {
-          width: 209px;
-          text-align: center; }
-    .main .layout .stfloor .partnerBox {
-      position: relative;
-      width: 824px; }
-      .main .layout .stfloor .partnerBox .floorT {
-        height: 54px; }
-      .main .layout .stfloor .partnerBox h2 {
-        line-height: 54px; }
-      .main .layout .stfloor .partnerBox span {
-        line-height: 54px; }
-      .main .layout .stfloor .partnerBox ul li {
-        float: left;
-        border: 1px solid #e5e5e5; }
-        .main .layout .stfloor .partnerBox ul li img {
-          width: 204px;
-          height: 80px; }
+    overflow: hidden; }
+    .layout .stfloor .authorBox .floorTit {
+      padding-left: 15px;
+      height: 53px;
+      line-height: 53px;
+      border-bottom: 1px solid #f5f5f5; }
+      .layout .stfloor .authorBox .floorTit h2 {
+        line-height: 53px; }
+    .layout .stfloor .authorBox .authorList {
+      border-bottom: 1px solid #e5e5e5; }
+      .layout .stfloor .authorBox .authorList img {
+        margin: 0 auto; }
+      .layout .stfloor .authorBox .authorList li {
+        padding-bottom: 8px; }
+      .layout .stfloor .authorBox .authorList span {
+        font-size: 18px;
+        font-weight: normal;
+        display: block;
+        margin-top: 10px; }
+      .layout .stfloor .authorBox .authorList em {
+        font-size: 11px;
+        font-style: normal;
+        letter-spacing: -1px; }
+      .layout .stfloor .authorBox .authorList .item_CHO {
+        width: 166px;
+        border-right: 1px solid #e5e5e5;
+        text-align: center; }
+      .layout .stfloor .authorBox .authorList .item_AEC {
+        width: 209px;
+        text-align: center; }
+  .layout .stfloor .partnerBox {
+    position: relative;
+    width: 824px; }
+    .layout .stfloor .partnerBox .floorT {
+      height: 54px; }
+    .layout .stfloor .partnerBox h2 {
+      line-height: 54px; }
+    .layout .stfloor .partnerBox span {
+      line-height: 54px; }
+    .layout .stfloor .partnerBox ul li {
+      float: left;
+      border: 1px solid #e5e5e5; }
+      .layout .stfloor .partnerBox ul li img {
+        width: 204px;
+        height: 80px; }
 
 .anchor {
   width: 70px;
