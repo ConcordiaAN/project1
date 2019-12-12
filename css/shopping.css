@@ -93,21 +93,56 @@
     height: 30px; }
 
 #main table {
-  margin-top: 70px; }
+  margin-top: 70px;
+  margin-bottom: 30px; }
   #main table thead {
     line-height: 30px;
     text-align: center;
     background: #c40000;
     color: #fff; }
+    #main table thead tr th {
+      border: 1px solid #000; }
   #main table tbody {
     background: #fff; }
     #main table tbody tr td {
       width: 0px;
-      padding: 0 10px; }
+      padding: 0 10px;
+      border-bottom: 1px solid #eee; }
       #main table tbody tr td img {
         display: inline-block;
         width: 250px;
         height: 250px; }
+      #main table tbody tr td:nth-child(1) {
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        width: 70px; }
+      #main table tbody tr td:nth-child(2) {
+        width: 250px;
+        height: 200px; }
+      #main table tbody tr td:nth-child(3) {
+        width: 200px;
+        text-align: center; }
+      #main table tbody tr td:nth-child(4) {
+        width: 120px; }
+      #main table tbody tr td:nth-child(5) {
+        width: 80px; }
+      #main table tbody tr td:nth-child(6) {
+        width: 80px; }
+      #main table tbody tr td:nth-child(7) {
+        width: 80px;
+        cursor: pointer;
+        text-align: center;
+        background: #ca4545;
+        color: #fff; }
+  #main table tfoot {
+    line-height: 30px;
+    text-align: center;
+    background: #c40000;
+    color: #fff; }
+    #main table tfoot td:nth-child(2) {
+      background: #fff;
+      color: #666; }
 
 #footer {
   padding: 0 0 20px;

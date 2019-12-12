@@ -134,27 +134,88 @@
 
     table {
         margin-top: 70px;
+        margin-bottom: 30px;
         thead {
             line-height: 30px;
             text-align: center;
             background: #c40000;
             color: #fff;
+            
+            tr {
+                th {
+                    border: 1px solid #000;
+                }
+            }
         }
         tbody {
             background: #fff;
+            
             tr{
+                
                 td {
                     width: 0px;
                     padding: 0 10px;
+                    border-bottom: 1px solid #eee;
                     img {
                         display: inline-block;
                         width: 250px;
                         height: 250px;
                         
                     }
+                    &:nth-child(1){
+                        border-right: 1px solid #eee;
+                        border-bottom: 1px solid #eee;
+                        text-align: center;
+                        width: 70px;
+                    }
+                    &:nth-child(2){
+                        width: 250px;
+                        height: 200px;
+                        
+                    }
+                    &:nth-child(3){
+                        width: 200px;
+                        
+                        text-align: center;
+                    }
+                    &:nth-child(4){
+                        width: 120px;
+                        
+                    }
+                    &:nth-child(5){
+                        width: 80px;
+                        
+                    }
+                    &:nth-child(6){
+                        width: 80px;
+                        
+                    }
+                    &:nth-child(7){
+                        width: 80px;
+                        cursor: pointer;
+                        text-align: center;
+                        background: #ca4545;
+                        color: #fff;
+                        
+                    }
                 }
+                
             }
             
+        }
+        tfoot {
+            line-height: 30px;
+            text-align: center;
+            background: #c40000;
+            color: #fff;
+
+            td {
+                
+                &:nth-child(2){
+                    background: #fff;
+                    color: #666;
+                }
+            }
         }
     }
 }
